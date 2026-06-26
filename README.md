@@ -2,7 +2,7 @@
 
 A highly secure command-line interface (CLI) registration and authentication application written in Go. The system operates on a client-database architecture inside Docker containers and incorporates cybersecurity best practices including cryptographic password hashing, brute-force lockout protection, sliding session timeouts, and Time-based One-Time Passwords (TOTP) compatible with Google Authenticator.
 
-## 📌 Features
+## Features
 
 ### 1. Authentication & Security
 * **Secure Password Storage:** User passwords are hashed using `bcrypt` with a cost factor of `12` to prevent offline brute-force attacks in case of database leaks.
@@ -19,7 +19,7 @@ A highly secure command-line interface (CLI) registration and authentication app
 
 ---
 
-## 🛠 Project Architecture
+## Project Architecture
 
 ```
 ├── cmd/
@@ -45,7 +45,7 @@ A highly secure command-line interface (CLI) registration and authentication app
 
 ---
 
-## 🚀 Quick Start (Running in Docker)
+## Quick Start (Running in Docker)
 
 To run this application, you only need **Docker** and **Docker Compose** installed on your host system.
 
@@ -68,7 +68,7 @@ docker compose run --rm cli
 
 ---
 
-## 📖 CLI Commands Guide
+## CLI Commands Guide
 
 ### Unauthenticated Commands (Before Login)
 Upon booting up the shell, you will see the `osto-secure>` prompt.
@@ -94,7 +94,7 @@ Once logged in, the prompt changes to `[username] osto-secure>`.
 
 ---
 
-## ⚙️ Configuration Variables
+## Configuration Variables
 
 You can customize the application behaviour in the `environment:` section of the `cli` service in [docker-compose.yml](file:///d:/osto_go_backend/docker-compose.yml):
 
@@ -112,7 +112,7 @@ You can customize the application behaviour in the `environment:` section of the
 
 ---
 
-## 🧪 Running Unit & Integration Tests
+## Running Unit & Integration Tests
 
 The project includes a robust test suite in `internal/auth/service_test.go` and `internal/totp/totp_test.go` verifying core auth logic, brute-force lockouts, sliding session timeouts, password strength validation, and TOTP key creation.
 
